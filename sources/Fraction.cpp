@@ -98,14 +98,14 @@ namespace ariel
 
     Fraction operator+(double temp, const Fraction &fraction)
     {
-        Fraction frac = temp + fraction.toDouble();
+        Fraction frac = Fraction(temp) + fraction;
         frac.reduce();
         return frac;
     }
 
     Fraction operator+(const Fraction &fraction, double temp)
     {
-        Fraction frac = fraction.toDouble() + temp;
+        Fraction frac = fraction + Fraction(temp);
         frac.reduce();
         return frac;
     }
@@ -128,14 +128,14 @@ namespace ariel
 
     Fraction operator-(double temp, const Fraction &fraction)
     {
-        Fraction frac = temp - fraction.toDouble();
+        Fraction frac = Fraction(temp) - fraction;
         frac.reduce();
         return frac;
     }
 
     Fraction operator-(const Fraction &fraction, double temp)
     {
-        Fraction frac = fraction.toDouble() - temp;
+        Fraction frac = fraction - Fraction(temp);
         frac.reduce();
         return frac;
     }
